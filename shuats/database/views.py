@@ -5,8 +5,16 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return HttpResponse("This is shuats data base")
+    information = {
+        "Admin_id" : "Database Login"
+    }
+    return render(request, 'index.html', information)
+
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
 def view(request):
     return HttpResponse("This is view page")
+
 def edit(request):
     return HttpResponse("This is edit page")
